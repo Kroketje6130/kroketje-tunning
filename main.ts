@@ -1,11 +1,13 @@
 input.onButtonPressed(Button.A, function () {
-    varken.change(LedSpriteProperty.X, -1)
+    ruimteschip.change(LedSpriteProperty.X, -1)
+})
+input.onButtonPressed(Button.AB, function () {
+    mijn_kogel = game.createSprite(ruimteschip.get(LedSpriteProperty.X), 3)
 })
 input.onButtonPressed(Button.B, function () {
-    varken.change(LedSpriteProperty.X, 1)
+    ruimteschip.change(LedSpriteProperty.X, 1)
 })
-let varken: game.LedSprite = null
-varken = game.createSprite(2, 4)
-basic.forever(function () {
-	
-})
+let mijn_kogel: game.LedSprite = null
+let ruimteschip: game.LedSprite = null
+radio.setGroup(7)
+ruimteschip = game.createSprite(2, 4)
